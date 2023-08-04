@@ -6,11 +6,11 @@ from grid import Grid
 
 class Game:
     def __init__(self):
-        grid_size = 20
+        grid_size = 12
         grid_size += (
             2  # adding 2 for the outside boundaries, will not be visible on screen
         )
-        square_size = 20
+        square_size = 40
         spacing = 1
 
         # pygame setup
