@@ -13,8 +13,8 @@ class Square:
             screen,
             "green",
             pg.Rect(
-                (square_size + spacing) * x  + self.spacing,
-                (square_size + spacing) * y  + self.spacing,
+                (square_size + spacing) * x  + spacing,
+                (square_size + spacing) * y  + spacing,
                 square_size,
                 square_size,
             ),
