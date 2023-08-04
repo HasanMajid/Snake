@@ -21,7 +21,7 @@ class Game:
                 (square_size + spacing) * grid_size - square_size * 2 - spacing,
             )
         )
-        # clock = pg.time.Clock()
+        clock = pg.time.Clock()
         running = True
 
         snake = Snake(grid_size)
@@ -108,6 +108,6 @@ class Game:
             # limits FPS to 60
             # dt is delta time in seconds since last frame, used for framerate-
             # independent physics.
-            # dt = clock.tick(60) / 1000
+            dt = clock.tick(60) / 1000
 
         pg.quit()
