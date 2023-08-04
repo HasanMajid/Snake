@@ -20,6 +20,6 @@ class Grid:
                     y += 1
                     self.grid.append(row)
                     row = []
-            row.append(Square(x, y, self.screen, self.square_size, self.spacing))
+            row.append(Square(x - 1 , y - 1, self.screen, self.square_size, self.spacing))
         self.grid.append(row)
 
