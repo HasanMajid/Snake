@@ -15,12 +15,10 @@ class Game:
 
         # pygame setup
         pg.init()
-        screen = pg.display.set_mode(
-            (
-                (square_size + spacing) * grid_size - square_size * 2 - spacing,
-                (square_size + spacing) * grid_size - square_size * 2 - spacing,
-            )
-        )
+        width = (square_size + spacing) * grid_size - square_size * 2 - spacing
+        height = (square_size + spacing) * grid_size - square_size * 2 - spacing + 200
+        pg.display.set_caption("Snake")
+        screen = pg.display.set_mode((width, height))
         clock = pg.time.Clock()
         running = True
 
