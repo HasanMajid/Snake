@@ -33,7 +33,20 @@ class Scoreboard:
                 "orange",
                 pg.Rect(
                     self.width / 2 - 100,
-                    self.width + 50,
+                    self.width + 40,
+                    0,
+                    0,
+                ),
+            ),
+        )
+        self.screen.blit(
+            self.font.render("High Score: " + str(self.highscore), True, "black", self.orange),
+            pg.draw.rect(
+                self.screen,
+                "orange",
+                pg.Rect(
+                    self.width / 2 - 100,
+                    self.width + 80,
                     0,
                     0,
                 ),
