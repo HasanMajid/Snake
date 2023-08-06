@@ -52,3 +52,6 @@ class Scoreboard:
                 ),
             ),
         )
+
+    def reset(self):
+        self.score = 0

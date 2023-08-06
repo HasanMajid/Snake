@@ -39,3 +39,11 @@ class Snake:
         if self.trail[0].x != self.grid_size - 1:
             self.trail.shift_right()
             self.dir = "right"
+
+    def reset(self):
+        self.dir = "False"
+        self.trail = Trail(
+            [
+                Point.rand_point(1, self.grid_size - 1 - 2),
+            ]
+        )
