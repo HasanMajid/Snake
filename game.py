@@ -6,6 +6,8 @@ from scoreboard import Scoreboard
 
 class Game:
     def __init__(self):
+
+        # Setting grid size and spacing
         grid_size = 12
         grid_size += (
             2  # adding 2 for the outside boundaries, will not be visible on screen
@@ -22,6 +24,7 @@ class Game:
         clock = pg.time.Clock()
         running = True
 
+        # Creating game objects
         scoreboard = Scoreboard(screen, width)
         snake = Snake(grid_size)
         food = Food(grid_size, snake.trail)
