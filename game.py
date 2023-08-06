@@ -64,7 +64,7 @@ class Game:
             ) / 1000  # calculate how many seconds
 
             # Moving snake every 0.2 seconds
-            if seconds >= 0.2 and game_over == False:
+            if seconds >= 0.15 and game_over == False:
                 start_ticks = pg.time.get_ticks()  # starter tick
                 if snake.dir == "up":
                     snake.move_up()
