@@ -2,7 +2,7 @@ import pygame as pg
 from snake import Snake
 from food import Food
 from grid import Grid
-
+from scoreboard import Scoreboard
 
 class Game:
     def __init__(self):
@@ -100,6 +100,10 @@ class Game:
             if snake.trail[0] == food:
                 snake.grow()
                 food = Food(grid_size, snake.trail)
+                scoreboard.score += 1 # Incrementing score
+
+            # Drawing scoreboard
+            scoreboard.draw_score()
 
             # flip() the display to put your work on screen
             pg.display.flip()
