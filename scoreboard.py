@@ -32,8 +32,8 @@ class Scoreboard:
                 self.screen,
                 "orange",
                 pg.Rect(
-                    self.width / 2 - 100,
-                    self.width + 40,
+                    self.width / 2 - 120,
+                    self.width + 20,
                     0,
                     0,
                 ),
@@ -45,8 +45,21 @@ class Scoreboard:
                 self.screen,
                 "orange",
                 pg.Rect(
-                    self.width / 2 - 100,
-                    self.width + 80,
+                    self.width / 2 - 120,
+                    self.width + 60,
+                    0,
+                    0,
+                ),
+            ),
+        )
+        self.screen.blit(
+            self.font.render("Press r to restart", True, "black", self.orange),
+            pg.draw.rect(
+                self.screen,
+                "orange",
+                pg.Rect(
+                    self.width / 2 - 120,
+                    self.width + 100,
                     0,
                     0,
                 ),
