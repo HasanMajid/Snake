@@ -22,6 +22,7 @@ class Game:
         clock = pg.time.Clock()
         running = True
 
+        scoreboard = Scoreboard(screen, width)
         snake = Snake(grid_size)
         food = Food(grid_size, snake.trail)
 
