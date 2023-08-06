@@ -42,20 +42,20 @@ class Game:
             if len(snake.trail) > 1:
                 if keys[pg.K_w] and snake.trail[0].y - 1 != snake.trail[1].y:
                     snake.dir = "up"
-                if keys[pg.K_s] and snake.trail[0].y + 1 != snake.trail[1].y:
+                elif keys[pg.K_s] and snake.trail[0].y + 1 != snake.trail[1].y:
                     snake.dir = "down"
-                if keys[pg.K_a] and snake.trail[0].x - 1 != snake.trail[1].x:
+                elif keys[pg.K_a] and snake.trail[0].x - 1 != snake.trail[1].x:
                     snake.dir = "left"
-                if keys[pg.K_d] and snake.trail[0].x + 1 != snake.trail[1].x:
+                elif keys[pg.K_d] and snake.trail[0].x + 1 != snake.trail[1].x:
                     snake.dir = "right"
             else:
                 if keys[pg.K_w]:
                     snake.dir = "up"
-                if keys[pg.K_s]:
+                elif keys[pg.K_s]:
                     snake.dir = "down"
-                if keys[pg.K_a]:
+                elif keys[pg.K_a]:
                     snake.dir = "left"
-                if keys[pg.K_d]:
+                elif keys[pg.K_d]:
                     snake.dir = "right"
 
             seconds = (
