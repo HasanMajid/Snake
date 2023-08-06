@@ -4,9 +4,9 @@ from food import Food
 from grid import Grid
 from scoreboard import Scoreboard
 
+
 class Game:
     def __init__(self):
-
         # Setting grid size and spacing
         grid_size = 12
         grid_size += (
