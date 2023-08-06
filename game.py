@@ -23,6 +23,7 @@ class Game:
         screen = pg.display.set_mode((width, height))
         clock = pg.time.Clock()
         running = True
+        game_over = False
 
         # Creating game objects
         scoreboard = Scoreboard(screen, width)
@@ -63,7 +64,7 @@ class Game:
             ) / 1000  # calculate how many seconds
 
             # Moving snake every 0.2 seconds
-            if seconds >= 0.2:
+            if seconds >= 0.2 and game_over == False:
                 start_ticks = pg.time.get_ticks()  # starter tick
                 if snake.dir == "up":
                     snake.move_up()
@@ -74,18 +75,18 @@ class Game:
                 elif snake.dir == "right":
                     snake.move_right()
 
-            # Checking for collision
-            if snake.trail[0].x == 0 or snake.trail[0].x == grid_size - 1:
-                print("Game Over")
-                running = False
-            elif snake.trail[0].y == 0 or snake.trail[0].y == grid_size - 1:
-                print("Game Over")
-                running = False
+                # Checking for collision
+                if snake.trail[0].x == 0 or snake.trail[0].x == grid_size - 1:
+                    print("Game Over")
+                    game_over = True
+                elif snake.trail[0].y == 0 or snake.trail[0].y == grid_size - 1:
+                    print("Game Over")
+                    game_over = True
 
             for i in range(2, len(snake.trail)):
                 if snake.trail[0] == snake.trail[i]:
                     print("Game Over")
-                    running = False
+                    game_over = True
 
             # fill the screen with a color to wipe away anything from last frame
             screen.fill("black")
