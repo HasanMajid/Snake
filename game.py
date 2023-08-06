@@ -84,7 +84,7 @@ class Game:
                 elif snake.dir == "right":
                     snake.move_right()
 
-                # Checking for collision
+                # Checking for collision with borders
                 if snake.trail[0].x == 0 or snake.trail[0].x == grid_size - 1:
                     print("Game Over")
                     game_over.status = True
