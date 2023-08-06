@@ -9,7 +9,7 @@ class Scoreboard:
         self.highscore = 0
         self.font = pg.font.Font("freesansbold.ttf", 32)
 
-        #  green, blue colour .
+        # Colours for text
         self.white = (255, 255, 255)
         self.green = (0, 255, 0)
         self.blue = (0, 0, 128)
