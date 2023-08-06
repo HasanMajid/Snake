@@ -82,11 +82,12 @@ class Game:
                 elif snake.trail[0].y == 0 or snake.trail[0].y == grid_size - 1:
                     print("Game Over")
                     game_over = True
-
-            for i in range(2, len(snake.trail)):
-                if snake.trail[0] == snake.trail[i]:
-                    print("Game Over")
-                    game_over = True
+                
+                # Checking if snake collides with itself
+                for i in range(2, len(snake.trail)):
+                    if snake.trail[0] == snake.trail[i]:
+                        print("Game Over")
+                        game_over = True
 
             # fill the screen with a color to wipe away anything from last frame
             screen.fill("black")
@@ -105,6 +106,10 @@ class Game:
                 snake.grow()
                 food = Food(grid_size, snake.trail)
                 scoreboard.score += 1 # Incrementing score
+
+            # Checking if there is a new highscore and updating when there is
+            if scoreboard.score > scoreboard.highscore:
+                scoreboard.highscore = scoreboard.score
 
             # Drawing scoreboard
             scoreboard.draw_score()
