@@ -5,7 +5,6 @@ from trail import Trail
 class Snake:
     def __init__(self, grid_size):
         self.grid_size = grid_size
-        self.length = 1
         self.dir = "False"
         self.trail = Trail(
             [
