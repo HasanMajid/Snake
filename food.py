@@ -10,7 +10,6 @@ class Food(Point):
         while trail.has_point(point):
             point = Point.rand_point(1, grid_size - 3)
         super().__init__(point.x, point.y)
-        print(point.x, point.y)
 
     def reset(self):
         self.__init__(self.grid_size, self.trail)
