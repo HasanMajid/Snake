@@ -12,29 +12,33 @@ class Trail:
     def __len__(self):
         return len(self._trail)
 
-    def shift_up(self):
+    def shift_up(self, length):
         current_x = self._trail[0].x
         current_y = self._trail[0].y
         self._trail.insert(0, Point(current_x, current_y - 1))
-        self._trail.pop()
+        if len(self) != length:
+            self._trail.pop()
 
-    def shift_down(self):
+    def shift_down(self, length):
         current_x = self._trail[0].x
         current_y = self._trail[0].y
         self._trail.insert(0, Point(current_x, current_y + 1))
-        self._trail.pop()
-
-    def shift_left(self):
+        if len(self) != length:
+            self._trail.pop()
+            
+    def shift_left(self, length):
         current_x = self._trail[0].x
         current_y = self._trail[0].y
         self._trail.insert(0, Point(current_x - 1, current_y))
-        self._trail.pop()
+        if len(self) != length:
+            self._trail.pop()
 
-    def shift_right(self):
+    def shift_right(self, length):
         current_x = self._trail[0].x
         current_y = self._trail[0].y
         self._trail.insert(0, Point(current_x + 1, current_y))
-        self._trail.pop()
+        if len(self) != length:
+            self._trail.pop()
 
     def has_point(self, point1):
         for point2 in self._trail:
